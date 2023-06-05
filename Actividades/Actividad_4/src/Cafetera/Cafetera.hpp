@@ -10,5 +10,6 @@ class Cafetera {
 	public:
 		Cafetera(std::string, float, float);
 		std::string toString();
-		friend int operator +(Cafetera &c1, Cafetera&c2);
+		friend Cafetera operator +(Cafetera&, Cafetera&);
+		friend float operator +(float, Cafetera&);
 };
