@@ -6,6 +6,11 @@ std::string Cafetera::toString() {
 	return "Cafetera(" + std::to_string(capacidad) + "," + std::to_string(tazasMin) + "," + nombre + ")";
 }
 
-int operator +(Cafetera &c1, Cafetera &c2) {
-	return c1.tazasMin + c2.tazasMin;
+Cafetera operator +(Cafetera &c1, Cafetera &c2) {
+	Cafetera c("Profesional", c1.capacidad + c2.capacidad, c1.tazasMin + c2.tazasMin);
+	return c;
+}
+
+float operator +(float num, Cafetera &c) {
+	return num + c.tazasMin;
 }
