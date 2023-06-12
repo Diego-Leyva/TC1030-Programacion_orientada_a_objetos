@@ -166,24 +166,36 @@ int main() {
     }
 
     //////////////////////////////////////////////////////////////////
+    int sel;
+    std::cout << "Seleccione una opcion: " << std::endl;
+    std::cout << "1.Peliculas" << std::endl;
+    std::cout << "2.Series" << std::endl;
+    std::cin >> sel;
 
-    std::cout << "Disney Plus" << std::endl;
-    std::cout << Disney.getMenuSeries() << std::endl;
-    std::cout << "Netflix" << std::endl;
-    std::cout << Netflix.getMenuSeries() << std::endl;
-    std::cout << "HBO" << std::endl;
-    std::cout << HBO.getMenuSeries() << std::endl;
-    std::cout << "Crunhyroll" << std::endl;
-    std::cout << Crunchyroll.getMenuSeries() << std::endl;
+    if (sel == 2) {
+        std::cout << "Disney Plus" << std::endl;
+        std::cout << Disney.getMenuSeries() << std::endl;
+        std::cout << "Netflix" << std::endl;
+        std::cout << Netflix.getMenuSeries() << std::endl;
+        std::cout << "HBO" << std::endl;
+        std::cout << HBO.getMenuSeries() << std::endl;
+        std::cout << "Crunhyroll" << std::endl;
+        std::cout << Crunchyroll.getMenuSeries() << std::endl;
+    }
 
-    std::cout << "Disney Plus" << std::endl;
-    std::cout << Disney.getMenuPeliculas() << std::endl;
-    std::cout << "Netflix" << std::endl;
-    std::cout << Netflix.getMenuPeliculas() << std::endl;
-    std::cout << "HBO" << std::endl;
-    std::cout << HBO.getMenuPeliculas() << std::endl;
-    std::cout << "Crunhyroll" << std::endl;
-    std::cout << Crunchyroll.getMenuPeliculas() << std::endl;
+    else if (sel == 1) {
+        std::cout << "Disney Plus" << std::endl;
+        std::cout << Disney.getMenuPeliculas() << std::endl;
+        std::cout << "Netflix" << std::endl;
+        std::cout << Netflix.getMenuPeliculas() << std::endl;
+        std::cout << "HBO" << std::endl;
+        std::cout << HBO.getMenuPeliculas() << std::endl;
+        std::cout << "Crunhyroll" << std::endl;
+        std::cout << Crunchyroll.getMenuPeliculas() << std::endl;
+    }
 
+    else {
+        std::cout << "Invalido" << std::endl;
+    }
     return 0;
 }
