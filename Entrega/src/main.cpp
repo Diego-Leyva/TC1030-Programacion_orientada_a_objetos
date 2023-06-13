@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <filesystem>
 #include <unordered_map>
 #include "Pelicula.hpp"
 #include "Episodio.hpp"
@@ -169,7 +170,8 @@ int main() {
     int sel;
     std::cout << "Seleccione una opcion: " << std::endl;
     std::cout << "1.Peliculas" << std::endl;
-    std::cout << "2.Series" << std::endl;
+    std::cout << "2.Series" << std::endl; 
+    std::cout << "3.Cambiar calificacion" << std::endl;
     std::cin >> sel;
 
     if (sel == 2) {
@@ -192,6 +194,85 @@ int main() {
         std::cout << HBO.getMenuPeliculas() << std::endl;
         std::cout << "Crunhyroll" << std::endl;
         std::cout << Crunchyroll.getMenuPeliculas() << std::endl;
+    }
+
+    else if (sel == 3) {
+        std::string nombre;
+        int tipo;
+        float calif;
+
+        std::cout << "1.Pelicula\n2.Serie" << std::endl;
+        std::cin >> tipo;
+        std::cout << "Nombre del episodio/pelicula" << std::endl;
+        std::cin >> nombre;
+        std::cout << "Calificacion" << std::endl;
+        std::cin >> calif;
+
+        if (tipo == 2) {
+            const std::vector<Serie> s1 = Disney.getSeries();
+            const std::vector<Serie> s2 = Netflix.getSeries();
+            const std::vector<Serie> s3 = HBO.getSeries();
+            const std::vector<Serie> s4 = Crunchyroll.getSeries();
+
+            for (auto item : s1) {
+                for (auto ep : item.getEpisodios()) {
+                    if (ep.getNombre()  == nombre) {
+                        ep.setCalificacion(calif);
+                    }
+                }
+            }
+
+            for (auto item : s2) {
+                for (auto ep : item.getEpisodios()) {
+                    if (ep.getNombre()  == nombre) {
+                        ep.setCalificacion(calif);
+                    }
+                }
+            }
+
+            for (auto item : s3) {
+                for (auto ep : item.getEpisodios()) {
+                    if (ep.getNombre()  == nombre) {
+                        ep.setCalificacion(calif);
+                    }
+                }
+            }
+
+            for (auto item : s4) {
+                for (auto ep : item.getEpisodios()) {
+                    if (ep.getNombre()  == nombre) {
+                        ep.setCalificacion(calif);
+                    }
+                }
+            }
+        }
+
+        else if (tipo == 1) {
+            for (auto item : Disney.getPeliculas()) {
+                if (item.getNombre() == nombre) {
+                    item.setCalificacion(calif);
+                }
+            }
+
+            for (auto item : Netflix.getPeliculas()) {
+                if (item.getNombre() == nombre) {
+                    item.setCalificacion(calif);
+                }
+            }
+
+            for (auto item : HBO.getPeliculas()) {
+                if (item.getNombre() == nombre) {
+                    item.setCalificacion(calif);
+                }
+            }
+
+            for (auto item : Crunchyroll.getPeliculas()) {
+                if (item.getNombre() == nombre) {
+                    item.setCalificacion(calif);
+                }
+            }
+        }
+
     }
 
     else {
