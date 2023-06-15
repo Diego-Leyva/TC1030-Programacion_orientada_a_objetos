@@ -1,0 +1,21 @@
+
+***** Pruebas de CableAu
+CableAu(Auriculares(30),2.500000,0)
+Subiendo volumen de tus auriculares alambricos  
+Bajando volumen de tus auriculares alambricos   
+Bajando volumen de tus auriculares alambricos   
+CableAu(Auriculares(25),2.500000,0)
+
+***** Pruebas de auriculares Bluetooth
+BtAu(Auriculares(50),70,0)
+Subiendo el volumen de tus auriculares Bluetooth
+Subiendo el volumen de tus auriculares Bluetooth
+BtAu(Auriculares(60),70,1)
+Bajando el volumen de tus auriculares Bluetooth
+BtAu(Auriculares(55),70,1)
+
+***** Pruebas de polimorfismo
+Bajando volumen de tus auriculares alambricos
+Subiendo volumen de tus auriculares alambricos
+Bajando el volumen de tus auriculares Bluetooth
+Subiendo el volumen de tus auriculares Bluetooth
